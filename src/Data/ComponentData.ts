@@ -25,25 +25,34 @@ export const HeaderLinks: HeaderLinkType[] = [
   {
     link: "/products",
     text: "books",
+    window_view: false,
+
     variant: "link",
   },
   {
     link: "/how-it-works",
     text: "how it works",
+    window_view: false,
+
     variant: "link",
   },
   {
     link: "/news",
     text: "News",
+    window_view: false,
+
     variant: "link",
   },
   {
     link: "/contact-us",
     text: "Contact",
+    window_view: false,
+
     variant: "link",
   },
   {
-    link: "/",
+    link: "https://pdfportal.archrecode.com/Main_page1",
+    window_view: true,
     text: "get started",
     variant: "button",
   },

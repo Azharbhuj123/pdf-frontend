@@ -4,6 +4,7 @@ import type { StepComponentProps } from "./ComponentTypes";
 export type HeaderLinkType = {
   link: string;
   text: string;
+  window_view: boolean;
   variant: string;
 };
 

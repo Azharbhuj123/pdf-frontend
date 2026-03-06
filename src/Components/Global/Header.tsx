@@ -1,8 +1,7 @@
-import { NavLink, useNavigate } from "react-router";
+import { NavLink } from "react-router";
 import Container from "../Container";
 import Typography from "./Typography";
 import { LuUserRound } from "react-icons/lu";
-import { HiOutlineShoppingBag } from "react-icons/hi2";
 import Logo from "/LOGO.png";
 import Image from "./Image";
 import { HeaderLinks } from "@/Data/ComponentData";
@@ -11,8 +10,8 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import { useState } from "react";
 import AuthModal from "../Modal/AuthModal";
 
+
 const Header = () => {
-  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
   const [isVariant, setIsVariant] = useState<"login" | "register">("login");
@@ -35,19 +34,18 @@ const Header = () => {
                 type="button"
                 variant=""
                 handleClick={() => {
-                  setIsAuthOpen(true);
-                  setIsVariant("login");
+                  window.open("https://pdfportal.archrecode.com/", "_blank");
                 }}
                 extraClasses="flex items-center gap-1 uppercase"
               >
                 <LuUserRound className="text-black" /> Login
               </Button>
             </li>
-            <li className="text-secondary">
+            {/* <li className="text-secondary">
               <NavLink to="/login" className="flex items-center gap-1">
                 <HiOutlineShoppingBag className="text-black" /> Cart
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </Container>
       </div>
@@ -79,7 +77,12 @@ const Header = () => {
                       variant="primary"
                       btnText={item.text}
                       type="button"
-                      handleClick={() => navigate(item.link)}
+                      handleClick={() =>
+                        window.open(
+                          item.link,
+                          "_blank",
+                        )
+                      }
                     />
                   )}
                 </li>
